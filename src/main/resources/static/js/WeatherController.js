@@ -1,17 +1,23 @@
- var stackValues;
+ var weatherValues;
+ var selectedCity
 
-function displaySelectedStacks(){
-    getDailyStacks(paintTables)
+function setCity(city){
+    selectedCity=city;
 
+}
+
+function searchCityWeather(){
+    getCityWeather(updateDetails);
 }
 
 
 
- function getDailyStacks(callback){
+ function getCityWeather(callback){
 
-           axios.get( "http://localhost:5000/MSFT")
+           axios.get( "http://localhost:5000/weather/"+selectedCity)
            .then(function (response) {
-                stackValues=response.data;
+                weatherValues=response.data;
+
 
 
            })
@@ -27,6 +33,15 @@ function displaySelectedStacks(){
            });
 
     }
+ function updateDetails(){
+       document.getElementById("maxTempText").innerHTML=weatherValues.main.temp_max+" °F";
+       document.getElementById("minTempText").innerHTML=weatherValues.main.temp_min+" °F";
+       document.getElementById("climaText").innerHTML=weatherValues.weather[0].description;
+
+
+  }
+
+
      function paintTables(){
           var ordersList=frontEnd.getCurrentOrders();
           for(var order=0;order<ordersList.length;order++){

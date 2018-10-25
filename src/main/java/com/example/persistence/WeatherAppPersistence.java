@@ -10,4 +10,5 @@ public interface WeatherAppPersistence {
      * @param City a consultar
      */
     String getCityWeather(String City) throws  WeatherAppException;
+    void manejadorCache();
 }
