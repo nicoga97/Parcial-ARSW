@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+
+    <title></title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/cover.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center" onload="loadUpdateOrdersPage()" >
+
+    <div class="cover-container d-flex h-10 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Parcial 2</h3>
+          <nav class="nav nav-masthead justify-content-center">
+
+          </nav>
+        </div>
+      </header>
+        <main role="main" class="inner cover" id="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="dropdown">
+                            <button  class="btn btn-secondary dropdown-toggle" type="button" id="dropdownbtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                            </button>
+                            <div class="dropdown-menu" id="dpwSelectTable" aria-labelledby="dropdown">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <button class="btn btn-primary" id="addOrderBtn" onclick="displaySelectedStacks()" type="button">MSFT</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h3>Item</h3>
+
+                    </div>
+                    <div class="col-sm-3">
+                        <h3>Quantity</h3>
+                    </div>
+                </div>
+                <div class="row" id="tableItems">
+                    <div class="col-sm-3" id="itemsColm">
+
+                    </div>
+                    <div class="col-sm-3" id="quantityColm">
+
+                    </div>
+                    <div class="col-sm-3" id="updatebtn">
+
+                    </div>
+                    <div class="col-sm-3"id="deletebtn">
+
+                    </div>
+            </div>
+
+            </div>
+
+
+        </main>
+        <footer class="mastfoot mt-auto">
+            <div class="inner">
+                <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+        </footer>
+
+
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="js/StacksController.js"></script>
+    <script src="js/jquery-3.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-slim.min.js"><\/script>')</script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+
+  
+
+</body></html>
