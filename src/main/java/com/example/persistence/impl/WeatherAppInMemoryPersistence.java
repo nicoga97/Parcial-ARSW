@@ -30,6 +30,7 @@ public class WeatherAppInMemoryPersistence implements WeatherAppPersistence {
         return requests.get(city);
     }
     public void manejadorCache(){
+        //se necesita de un hilo no lo implemento por cuestiones de tiempo
         Calendar fecha = Calendar.getInstance();
         int minuto = fecha.get(Calendar.MINUTE);
         int cont=0;
